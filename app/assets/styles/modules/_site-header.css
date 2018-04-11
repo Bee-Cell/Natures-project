@@ -10,13 +10,13 @@
 	&__logo-box{
 		position: absolute;
 		/*border:$testBorder;*/
-		top: 40px;
-		left: 40px;
+		top: 4rem;
+		left: 4rem;
 	}
 
 
 	&__logo{
-		height: 35px;
+		height: 3.5rem;
 	}
 
 	&__info{
@@ -33,13 +33,13 @@
 		color: #FFF;
 		text-transform: uppercase;
 		backface-visibility: hidden; /*to fix little sake*/
-		margin-bottom: 60px;
+		margin-bottom: 6rem;
 
 		&--primary{
 			display: block;
-			font-size: 60px;
+			font-size: 6rem;
 			font-weight: 400;
-			letter-spacing: 35px;
+			letter-spacing: 3.5rem;
 			animation: moveInLeft 1s ease-out;
 			/*animation-iteration-count: 3;*/
 			/*animation-delay: 3s*/
@@ -47,9 +47,9 @@
 
 		&--secondary{
 			display: block;
-			font-size: 20px;
+			font-size: 2rem;
 			font-weight: 400;
-			letter-spacing: 17.4px;
+			letter-spacing: 1.75rem;
 			animation: moveInRight 1s ease-out;
 		}
 	}
@@ -62,11 +62,11 @@
 @keyframes moveInLeft {
 	0%{
 		opacity: 0;
-		transform: translateX(-100px);
+		transform: translateX(-10rem);
 	}
 
 	80%{
-		transform: translateX(10px);
+		transform: translateX(1rem);
 	}
 
 	100%{
@@ -78,11 +78,11 @@
 @keyframes moveInRight {
 	0%{
 		opacity: 0;
-		transform: translateX(100px);
+		transform: translateX(10rem);
 	}
 
 	80%{
-		transform: translateX(-10px);
+		transform: translateX(-1rem);
 	}
 
 	100%{

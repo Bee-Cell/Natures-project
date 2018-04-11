@@ -1,0 +1,8 @@
+@define-mixin clearfix{
+	&::after{
+		content: "";
+		clear: both;
+		display: table;
+	}/* //will add the balnk spack allof the float content*/
+
+}

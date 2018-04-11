@@ -1,0 +1,59 @@
+.row {
+	max-width: $rowWidth;
+	margin:0 auto;
+	
+	@mixin clearfix;
+
+	&:not(:last-child){ 
+		/*not will not do for the last only*/
+			margin-bottom: $rowVerticalGutter;
+	}
+
+
+/*to the class started with col- we dont want to repeat the code of float and margin*/
+[class^="col-"]{ 
+	/*this is the attribute selector*/
+		float: left;
+
+		&:not(:last-child) { 
+			/*margin is not created in right side in the class*/
+			margin-right: $colHorizontalGutter;
+		}
+}
+
+		
+	.col-1-of-2{
+		width: calc((100% - $colHorizontalGutter)/2);
+
+	
+	}
+
+	/*for colom 3*/
+
+	.col-1-of-3{
+		width: calc((100% - (2 * $colHorizontalGutter) ) / 3);
+
+	}
+
+	.col-2-of-3{
+		width: calc( 2 * ((100% - (2 * $colHorizontalGutter) ) / 3) + $colHorizontalGutter);
+	
+	}
+
+
+
+	.col-1-of-4{
+		width: calc((100% - (3 * $colHorizontalGutter)) /4 );
+
+	}
+
+	.col-2-of-4{
+		width: calc(2 * ( (100% - (3 * $colHorizontalGutter)) /4 ) + $colHorizontalGutter );
+
+	}
+	.col-3-of-4{
+		width: calc( 3 * ((100% - (3 * $colHorizontalGutter)) /4) + (2 * $colHorizontalGutter) );
+	}
+
+
+}

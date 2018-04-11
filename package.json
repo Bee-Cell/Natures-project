@@ -16,6 +16,7 @@
     "browser-sync": "2.18.13",
     "gulp": "3.9.1",
     "gulp-postcss": "7.0.0",
+    "postcss-calc": "^6.0.1",
     "postcss-color-function": "4.0.1",
     "postcss-hexrgba": "1.0.0",
     "postcss-import": "11.0.0",

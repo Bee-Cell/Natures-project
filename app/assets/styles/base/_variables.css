@@ -1,5 +1,20 @@
+/*COLORS */
 $lightGreen: #7ed56f;
 $mediumGreen : #55c57a;
 $darkGreen: #28b485;
-$googleFont: 'Lato', sans-serif;
+
+
+$colorGreyLight1: #F7F7F7;
+
+
+/*TESTing*/
 $testBorder: 2px solid red;
+
+/*Font */
+$defaultFontSize: 1.6rem;
+
+/*Gutters*/
+$rowWidth: 114rem;
+$rowVerticalGutter: 8rem;
+$colHorizontalGutter: 6rem;
+

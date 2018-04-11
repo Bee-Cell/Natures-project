@@ -5,9 +5,15 @@
 @import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
 
 /*IMPORTING FROM BASE*/
-@import "./base/_variables";
 @import "./base/_global";
+@import "./base/_variables";
+@import "./base/_utilities";
+@import "./base/_mixins";
 
 /*Modules*/
 @import "./modules/_site-header";
+@import "./modules/_typography";
 @import "./modules/_btn";
+@import "./modules/_row";
+@import "./modules/_about";
+@import "./modules/_composition";

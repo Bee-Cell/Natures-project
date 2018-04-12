@@ -6,6 +6,7 @@
 	/*for cliping the path;  http://bennettfeely.com/clippy*/
 	clip-path: polygon(0 0, 100% 0,  100% 75vh, 0 100%); /*clock wise*/
 	position: relative; 
+	background-attachment: fixed;
 	
 	&__logo-box{
 		position: absolute;

@@ -1,0 +1,27 @@
+.feature-item{
+	background-color: rgba(#FFF, .8);
+	font-size: 1.5rem;
+	padding: 2.5rem;
+	text-align: center;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba(0,0,0,1.5); 
+
+	transition: transform .5s ease-in-out;
+
+	&__icon{
+		font-size: 6rem;
+		margin-bottom: .5rem;
+		background-image: linear-gradient( to right, $lightGreen , $darkGreen );
+		-webkit-background-clip:text;
+		color: transparent;
+	}
+
+	&:hover{
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+
+	&__description{
+		/*the font size is inherited */
+	}
+
+}

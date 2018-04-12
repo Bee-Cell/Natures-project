@@ -1,0 +1,14 @@
+.feature-section{
+	margin-top: -11rem;
+	padding:20rem 0;
+	background-image: linear-gradient( to right bottom, rgba($lightGreen, 0.8), rgba($mediumGreen, 0.8)) , url(../../assets/images/nat-4.jpg);
+	background-size: cover;
+	/*we can do clip path with polygon*/
+	/*scew*/
+
+	transform: skewY(-7deg); /*X for clockwise and y for anti clock wise*/
+
+	& >  * { /*the direct child of the features*/
+		transform: skewY(7deg);
+	}
+}

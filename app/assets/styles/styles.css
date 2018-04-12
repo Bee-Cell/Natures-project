@@ -2,7 +2,7 @@
 
 /*importing from url*/
 @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900");
-@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");
+/*@import url("https://use.fontawesome.com/releases/v5.0.9/css/all.css");*/
 
 /*IMPORTING FROM BASE*/
 @import "./base/_global";
@@ -15,5 +15,7 @@
 @import "./modules/_typography";
 @import "./modules/_btn";
 @import "./modules/_row";
-@import "./modules/_about";
+@import "./modules/_about-section";
 @import "./modules/_composition";
+@import "./modules/_feature-section";
+@import "./modules/_feature-item";

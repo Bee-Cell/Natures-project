@@ -21,3 +21,6 @@
 @import "./modules/_feature-item";
 @import "./modules/_tour-section";
 @import "./modules/_card";
+@import "./modules/_stories-section";
+@import "./modules/_story";
+@import "./modules/_bg-video";

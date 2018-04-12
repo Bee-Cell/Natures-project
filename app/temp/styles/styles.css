@@ -755,3 +755,109 @@ body{
 	}
 
 /*.card:hover .card__side */
+
+.stories{
+	padding: 15rem 0;
+	/*background-color: $colorGreyLight1;*/
+	position: relative;
+}
+
+.story{
+	width: 75%;
+	margin:0 auto;
+	-webkit-box-shadow: 0 3rem 6rem rgba(0,0,0,.3);
+	        box-shadow: 0 3rem 6rem rgba(0,0,0,.3);
+	background-color: rgba(255,255,255, .6);
+	border-radius: 3px;
+	padding: 6rem;
+	padding-left: 9rem;
+	font-size: 1.6rem;
+	-webkit-transform: skewX(-12deg);
+	        transform: skewX(-12deg);
+
+
+}
+
+.story > * {
+		-webkit-transform: skewX(12deg);
+		        transform: skewX(12deg);
+	}
+
+.story__shape{
+		width: 15rem;
+		height: 15rem;
+		/*background-color: orangered;*/
+		float: left;
+		shape-outside: circle(50% at 50% 50%);/*it works on h, w,  and float*/
+		
+		-webkit-clip-path: circle(50% at 50% 50%);
+		
+		        clip-path: circle(50% at 50% 50%);
+		-webkit-transform: translateX(-3rem) skewX(12deg);
+		        transform: translateX(-3rem) skewX(12deg);
+		position: relative;
+	}
+
+.story__image{
+		/*width: 100%;*/
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+		-webkit-transform: translateX(-4rem) scale(1.3);
+		        transform: translateX(-4rem) scale(1.3);
+	}
+
+.story__text {
+		-webkit-transform: skewX(12deg);
+		        transform: skewX(12deg);
+	}
+
+.story__caption{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, 20%);
+		        transform: translate(-50%, 20%);
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 1.7rem;
+		opacity: 0;
+		-webkit-transition: all .5s;
+		transition: all .5s;
+		-webkit-backface-visibility:hidden;
+		        backface-visibility:hidden;
+	}
+
+.story:hover .story__caption{
+		opacity: 1;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+
+.story:hover .story__image{
+		-webkit-transform: translateX(-4rem) scale(1);
+		        transform: translateX(-4rem) scale(1);
+		-webkit-filter: blur(3px) brightness(80%);
+		        filter: blur(3px) brightness(80%);
+	}
+
+.bg-video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	opacity: .2;
+	overflow: hidden;
+}
+
+.bg-video__content{
+		/*to fix the video */
+		height: 100%;
+		width: 100%;
+		/*to maintaitns object ratio*/
+		-o-object-fit: cover;
+		   object-fit: cover;/*simlar to the cover and maintatins abspect ratio*/
+	}

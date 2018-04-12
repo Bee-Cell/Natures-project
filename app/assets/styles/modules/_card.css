@@ -1,0 +1,168 @@
+.card{
+	position: relative;
+	perspective: 150rem;
+	height: 52rem;
+	/*perspective has to be on the parent the*/
+	/*low the value the most dramatic the perspective int is on parent*/
+
+	&__side{
+		font-size: 2rem;
+		height: 52rem;
+		transition: all .8s ease;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		backface-visibility: hidden;
+		border-radius: 3px;
+		overflow: hidden;/*for the overlaping image the overlapping is hidden*/
+		box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+
+		&--front{
+			background-color: #FFF;
+		}
+
+		&--back{
+			
+			transform:rotateY(180deg);
+
+
+			&--one{
+				background-image: linear-gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark);
+			}
+
+			&--two{
+				background-image: linear-gradient(to right bottom, $lightGreen, $darkGreen);
+			}
+
+			&--three{
+				background-image: linear-gradient(to right bottom, $colorTertiaryLight, $colorTertiaryDark);
+			}
+
+		}
+	}
+
+	
+
+	&:hover &__side--front{
+		/*roate half of circle in y roatation*/
+		transform:rotateY(-180deg);
+
+	}
+
+	&:hover &__side--back{
+		/*roate half of circle in y roatation*/
+		transform:rotateY(0deg);
+
+	}
+
+
+
+	/*Front side styling*/
+	&__picture{
+		background-size: cover;
+		height: 23rem;
+		background-blend-mode: screen; /*checks in the dev tool */
+			/*blend-mode is not in fifefox and some other browser*/
+		clip-path: polygon(0 0 , 100% 0, 100% 85%, 0 100%);/*we hve move circle eclipse*/
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+
+		&--one{
+			background-image: linear-gradient(to right bottom, $colorSecondaryLight, $colorSecondaryDark) ,
+			url(../../assets/images/nat-5.jpg);
+			
+		
+		}
+		&--two{
+			background-image: linear-gradient(to right bottom, $lightGreen, $darkGreen) ,
+			url(../../assets/images/nat-6.jpg);
+		}
+		&--three{
+			background-image: linear-gradient(to right bottom, $colorTertiaryLight, $colorTertiaryDark) ,
+			url(../../assets/images/nat-7.jpg);
+		}
+	}
+
+	&__heading {
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #FFF;
+		text-align: right;
+		position: absolute;
+		top: 12rem;
+		right: 2rem;
+		width: 75%;
+
+
+	}
+
+	&__heading-span{
+			padding: 1rem 1.5rem;
+			box-decoration-break: clone; /*to fix the space in break */
+
+			&--one{
+				background-image: linear-gradient(to right bottom, rgba($colorSecondaryLight, .85), rgba($colorSecondaryDark, .85));
+
+			}
+			&--two{
+				background-image: linear-gradient(to right bottom, rgba($lightGreen, .85), rgba($darkGreen, .85));
+
+			}
+			&--three{
+				background-image: linear-gradient(to right bottom, rgba($colorTertiaryLight, .85), rgba($colorSecondaryDark, .85));
+
+			}
+		}
+
+
+	&__details{
+		padding: 3rem;
+		ul{
+			list-style: none;
+			width: 80%;
+			margin:0 auto;
+
+			li{
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+
+
+				&:not(:last-child){
+					border-bottom: 1px solid #eee;
+				}
+			}
+		}
+	}
+
+	/*Back side styling*/
+	&__cta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__price-box{
+		text-align: center;
+		margin-bottom: 8rem;
+		color: #FFF;
+	}
+
+	&__price-only{
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+	&__price-value{
+		font-size: 6rem;
+		font-weight: 100;
+	}
+
+	
+}
+
+/*.card:hover .card__side */

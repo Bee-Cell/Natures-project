@@ -48,6 +48,10 @@ body{
 
 .u-margin-bottom-bg{ margin-bottom: 8rem; }
 
+.u-margin-top-bg{ margin-top: 8rem; }
+
+.u-margin-top-xl{ margin-top: 10rem; }
+
 /*Modules*/
 
 .site-header{
@@ -291,6 +295,15 @@ body{
 			background-color: #FFF;
 		}
 
+.btn--green{
+		background-color: #7ed56f;
+		color: #fff;
+	}
+
+.btn--green::after{
+			background-color: #7ed56f;
+		}
+
 .btn--animated-bottom-to-top{
 			-webkit-animation: moveInBottom .5s ease-out .75s backwards;
 			        animation: moveInBottom .5s ease-out .75s backwards;
@@ -513,13 +526,13 @@ body{
 	-webkit-box-shadow: 0 1.5rem 4rem rgba(0,0,0,1.5);
 	        box-shadow: 0 1.5rem 4rem rgba(0,0,0,1.5); 
 
-	-webkit-transition: -webkit-transform .5s ease-in-out; 
+	-webkit-transition: -webkit-transform .1s ease-in-out; 
 
-	transition: -webkit-transform .5s ease-in-out; 
+	transition: -webkit-transform .1s ease-in-out; 
 
-	transition: transform .5s ease-in-out; 
+	transition: transform .1s ease-in-out; 
 
-	transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+	transition: transform .1s ease-in-out, -webkit-transform .1s ease-in-out;
 
 }
 
@@ -540,3 +553,205 @@ body{
 .feature-item__description{
 		/*the font size is inherited */
 	}
+
+.tours{
+	padding: 25rem 0 15rem 0;
+	background-color: #F7F7F7;
+	margin-top: -10rem;
+}
+
+.card{
+	position: relative;
+	-webkit-perspective: 150rem;
+	        perspective: 150rem;
+	height: 52rem;
+
+	
+}
+
+/*low the value the most dramatic the perspective int is on parent*/
+
+.card__side{
+		font-size: 2rem;
+		height: 52rem;
+		-webkit-transition: all .8s ease;
+		transition: all .8s ease;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		-webkit-backface-visibility: hidden;
+		        backface-visibility: hidden;
+		border-radius: 3px;
+		overflow: hidden;/*for the overlaping image the overlapping is hidden*/
+		-webkit-box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+		        box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+	}
+
+.card__side--front{
+			background-color: #FFF;
+		}
+
+.card__side--back{
+			
+			-webkit-transform:rotateY(180deg);
+			
+			        transform:rotateY(180deg);
+
+		}
+
+.card__side--back--one{
+				background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730));
+				background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+			}
+
+.card__side--back--two{
+				background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+				background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+			}
+
+.card__side--back--three{
+				background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa));
+				background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+			}
+
+/*perspective has to be on the parent the*/
+
+.card:hover .card__side--front{
+		/*roate half of circle in y roatation*/
+		-webkit-transform:rotateY(-180deg);
+		        transform:rotateY(-180deg);
+
+	}
+
+.card:hover .card__side--back{
+		/*roate half of circle in y roatation*/
+		-webkit-transform:rotateY(0deg);
+		        transform:rotateY(0deg);
+
+	}
+
+/*Front side styling*/
+
+.card__picture{
+		background-size: cover;
+		height: 23rem;
+		background-blend-mode: screen; /*checks in the dev tool */
+			/*blend-mode is not in fifefox and some other browser*/
+		-webkit-clip-path: polygon(0 0 , 100% 0, 100% 85%, 0 100%);
+		        clip-path: polygon(0 0 , 100% 0, 100% 85%, 0 100%);/*we hve move circle eclipse*/
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+
+.card__picture--one{
+			background-image: -webkit-gradient(linear, left top, right bottom, from(#ffb900), to(#ff7730)) ,
+			url(../../assets/images/nat-5.jpg);
+			background-image: linear-gradient(to right bottom, #ffb900, #ff7730) ,
+			url(../../assets/images/nat-5.jpg);
+			
+		
+		}
+
+.card__picture--two{
+			background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)) ,
+			url(../../assets/images/nat-6.jpg);
+			background-image: linear-gradient(to right bottom, #7ed56f, #28b485) ,
+			url(../../assets/images/nat-6.jpg);
+		}
+
+.card__picture--three{
+			background-image: -webkit-gradient(linear, left top, right bottom, from(#2998ff), to(#5643fa)) ,
+			url(../../assets/images/nat-7.jpg);
+			background-image: linear-gradient(to right bottom, #2998ff, #5643fa) ,
+			url(../../assets/images/nat-7.jpg);
+		}
+
+.card__heading {
+		font-size: 2.8rem;
+		font-weight: 300;
+		text-transform: uppercase;
+		color: #FFF;
+		text-align: right;
+		position: absolute;
+		top: 12rem;
+		right: 2rem;
+		width: 75%;
+
+
+	}
+
+.card__heading-span{
+			padding: 1rem 1.5rem;
+			-webkit-box-decoration-break: clone;
+			        box-decoration-break: clone;
+		}
+
+/*to fix the space in break */
+
+.card__heading-span--one{
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255,185,0, .85)), to(rgba(255,119,48, .85)));
+				background-image: linear-gradient(to right bottom, rgba(255,185,0, .85), rgba(255,119,48, .85));
+
+			}
+
+.card__heading-span--two{
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126,213,111, .85)), to(rgba(40,180,133, .85)));
+				background-image: linear-gradient(to right bottom, rgba(126,213,111, .85), rgba(40,180,133, .85));
+
+			}
+
+.card__heading-span--three{
+				background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(41,152,255, .85)), to(rgba(255,119,48, .85)));
+				background-image: linear-gradient(to right bottom, rgba(41,152,255, .85), rgba(255,119,48, .85));
+
+			}
+
+.card__details{
+		padding: 3rem;
+	}
+
+.card__details ul{
+			list-style: none;
+			width: 80%;
+			margin:0 auto;
+		}
+
+.card__details ul li{
+				text-align: center;
+				font-size: 1.5rem;
+				padding: 1rem;
+			}
+
+.card__details ul li:not(:last-child){
+					border-bottom: 1px solid #eee;
+				}
+
+/*Back side styling*/
+
+.card__cta {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+
+.card__price-box{
+		text-align: center;
+		margin-bottom: 8rem;
+		color: #FFF;
+	}
+
+.card__price-only{
+		font-size: 1.4rem;
+		text-transform: uppercase;
+	}
+
+.card__price-value{
+		font-size: 6rem;
+		font-weight: 100;
+	}
+
+/*.card:hover .card__side */

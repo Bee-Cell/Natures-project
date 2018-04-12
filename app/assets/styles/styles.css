@@ -19,3 +19,5 @@
 @import "./modules/_composition";
 @import "./modules/_feature-section";
 @import "./modules/_feature-item";
+@import "./modules/_tour-section";
+@import "./modules/_card";

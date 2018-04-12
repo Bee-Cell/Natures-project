@@ -6,7 +6,7 @@
 	border-radius: 3px;
 	box-shadow: 0 1.5rem 4rem rgba(0,0,0,1.5); 
 
-	transition: transform .5s ease-in-out;
+	transition: transform .1s ease-in-out;
 
 	&__icon{
 		font-size: 6rem;

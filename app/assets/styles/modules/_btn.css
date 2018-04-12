@@ -53,6 +53,16 @@
 		}
 	}
 
+
+	&--green{
+		background-color: $lightGreen;
+		color: #fff;
+
+		&::after{
+			background-color: $lightGreen;
+		}
+	}
+
 	
 
 	&--animated-bottom-to-top{
